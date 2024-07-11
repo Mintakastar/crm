@@ -119,3 +119,16 @@ and copy the code (to the new component):
       </div>
     </form>
     </div>
+
+
+## CORS
+
+a file ContactsController was created to resolve the CORS error 
+
+
+    @RestController
+    @RequestMapping("/api")
+    @CrossOrigin(origins="http://localhost:3000")   //this is to avoid issue with CORS error, because node is on port 3000 and java on 8080
+    public class ContactsController {
+    
+    }
